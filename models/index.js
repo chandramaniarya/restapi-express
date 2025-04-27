@@ -15,6 +15,9 @@ db.sequelize = sequelize;
 
 db.user = require("./user.model.js")(sequelize, Sequelize);
 db.user_meta = require("./user_meta.model.js")(sequelize, Sequelize);
+db.email_template   =   require("./email_template.js")(sequelize,Sequelize);
+db.category         =   require('./category.js')(sequelize,Sequelize);
+
 
 // One-to-One using user_id as the foreign key
 db.user.hasOne(db.user_meta, {

@@ -21,6 +21,7 @@ db.sequelize.sync({ force: true }).then(() => {
 
 app.use("/api/auth", require("./routes/auth.routes"));
 app.use("/api/user", require("./routes/user.routes"));
+app.use('/api/category',require('./routes/category.routes'));
 
 // Swagger Docs
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
